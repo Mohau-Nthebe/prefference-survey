@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/MyMainLayOut.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="logo">
+                <h1><a href="~/Home/">Survey <span>Planet</span></a></h1>
+                <p>My preferences</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="account">
+                <ul>
+                    <li>
+                        <div class="hidden-xs">
+                            <h4><a>Email</a></h4>
+                            <p>mohaunthebe97@gmail.com</p>
+                        </div>
+
+                        <div class="visible-xs">
+
+                            <p>018##-######</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="nav-menus">
+
+                <ul class="nav nav-pills">
+                    <li class="active"><a style="border-radius:initial;" href="~/Home/">Home</a></li>
+                    <li><a style="border-radius:initial;" href="~/Home/FillTheSurvey">Survey</a></li>
+                    <li><a style="border-radius:initial;" href="~/Home/ViewResults">Results</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container ">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My preferences survey</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

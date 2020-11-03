@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MyPrefSurvey.Models.ResultsViewModel>
+
+@{
+    ViewBag.Title = "ViewResults";
+}
+
+<h2>Results Dashboard</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotSurv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AveAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PercPizza)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PercPasta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EatOut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Radio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotSurv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AveAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PercPizza)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PercPasta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EatOut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Radio)
+        </td>
+        
+    </tr>
+}
+
+</table>
